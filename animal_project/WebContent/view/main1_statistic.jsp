@@ -6,6 +6,7 @@ response.setDateHeader("Expires",0);
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
@@ -48,49 +49,55 @@ response.setDateHeader("Expires",0);
 			width:100%;
 			height:50%;
 			position: absolute;
-			border: 1px solid black;
+			border: 1px solid gold;
 		}
 		
 		#top_left{
-			width:75%;
+			width:100%;
 			height:100%;
 			float:left;
 			position: relative;
 			border: 1px solid black;
 		}
 		
-		#top_right{
-			width:25%;
-			height:100%;
-			float:right;
-			position: relative;
-			border: 1px solid black;
-		}
+
 		
 		#bottom_left{
 			width:60%;
 			height:100%;
 			float:left;
 			position: relative;
-			border: 1px solid black;
+		
 		}
 		
 		#bottom_right{
 			width:40%;
 			height:100%;
-			float:right;
+			float:left;
 			position: relative;
-			border: 1px solid black;
+		
 		}	
 		
-		.iframe{
-	      width:99%;
-	      height:99%;
+		 .iframe{
+	      width:100%;
+	      height:100%;
 	      position:relative;
 	      margin:0% 0.5% 0% 0.5%;
 	      background-color:white;
 	      border-radius: 10px;
-      }
+	      border:0;
+	      
+      } 
+		
+		#wrap_bottom{
+			width:100%;
+			height:100%;
+			position:100%;
+			border:1px solid black;	
+		}
+      
+      
+      
 		
 </style>
 </head>
@@ -98,16 +105,21 @@ response.setDateHeader("Expires",0);
 <body>
 <div id=wrap>
 		<div id = "side_top">
-			<div id = "top_left"  style="float:left;">위 왼쪽</div>
-			<div id = "top_right"  style="float:right;">위 오른쪽</div>
+			<div id = "top_left"  style="float:left;">
+					<iframe class="iframe" src="../olddata/data2018.jsp"></iframe> </div>
+			
 		</div>
 		<div id = "side_bottom">
-			<div id = "	bottom_left"  style="float:left;">아래 왼쪽</div>
-			<div id = "bottom_right"  style="float:right;">
-				<iframe class="iframe" src="../ml/ml_graph.jsp"></iframe>  
+		
+				<div id = "bottom_left"  style="float:left;">
+					<iframe class="iframe"src="../sido/sido_bar.jsp"></iframe>
+					
+				</div>
+				<div id = "bottom_right"   style="float:right;">
+					<iframe class="iframe" src="../ml/ml_graph.jsp"></iframe>  
+				</div>
 			</div>
 		</div>
-		
-</div>
+
 </body>
 </html>
