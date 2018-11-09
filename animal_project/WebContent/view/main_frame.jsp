@@ -112,7 +112,7 @@
 					<div class="menubar">	
 						<ul class="sidenav">
 							<li>
-								<a href="main_statistic.jsp" target="display">Dashboard
+								<a href="main1_statistic.jsp" target="display">Dashboard
 								<span> 2018년 현재의 유기동물의 안락사, 자연사, 입양, 유기동물의 수 통계를 한눈에 볼 수 있는 페이지입니다. </span>
 								</a>
 							</li>
@@ -130,7 +130,7 @@
 						</ul>
 					</div> 
 					<div class="main_graph_area">
-							<iframe id='iframes' name='display' src='main_statistic.jsp'></iframe>	
+							<iframe id='iframes' name='display' src='main1_statistic.jsp'></iframe>	
 					</div>
 					
 					

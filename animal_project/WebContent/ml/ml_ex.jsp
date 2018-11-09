@@ -42,6 +42,7 @@ String dataPoints1 = gsonObj.toJson(list1);
 System.out.println(dataPoints2);
 System.out.println(dataPoints3);
 System.out.println(dataPoints4); */
+System.out.println(dataPoints1);
 %>
 
 
@@ -63,11 +64,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	data: [{
 		type: "pie",
 		startAngle: 25,
-		toolTipContent: "<b>{label}</b>: {y}마리",
+		toolTipContent: "<b>{label}</b>: {y}",
 		showInLegend: "true",
 		legendText: "{label}",
 		indexLabelFontSize: 16,
-		indexLabel: "{label} - {y}마리",
+		indexLabel: "{label} - {y}%",
 		dataPoints:<%out.print(dataPoints1);%>
 	}]
 });
@@ -76,10 +77,8 @@ chart.render();
 }
 </script>
 </head>
-
 <body>
 <div id="chartContainer" style="height: 370px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
-
 </html>

@@ -5,7 +5,6 @@
 <%@ page import="com.google.gson.JsonObject"%>
 <%@ page import="animal_project.DBConn" %>
 
-
 <%
 Connection conn = DBConn.getMySqlConnection();
 
@@ -42,44 +41,63 @@ String dataPoints1 = gsonObj.toJson(list1);
 System.out.println(dataPoints2);
 System.out.println(dataPoints3);
 System.out.println(dataPoints4); */
+
 %>
-
-
 
 
 <!DOCTYPE HTML>
 <html>
 <head>
-<script>
-window.onload = function() {
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+window.onload = function() { 
+ 
 var chart = new CanvasJS.Chart("chartContainer", {
-	theme: "light2", // "light1", "light2", "dark1", "dark2"
-	exportEnabled: true,
 	animationEnabled: true,
+	theme: "light2",
 	title: {
 		text: "유기동물 입양 예측 현황"
 	},
+	toolTip: {
+		shared: true
+	},
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
 	data: [{
-		type: "pie",
-		startAngle: 25,
-		toolTipContent: "<b>{label}</b>: {y}마리",
-		showInLegend: "true",
-		legendText: "{label}",
-		indexLabelFontSize: 16,
-		indexLabel: "{label} - {y}마리",
-		dataPoints:<%out.print(dataPoints1);%>
-	}]
+		type: "column",
+		name: "입양 여부",
+		yValueFormatString: "#0.##",
+		showInLegend: true,
+		dataPoints: <%out.print(dataPoints1);%>
+	},{
+		type : "column",
+		name : "n_adopted",
+		yValueFormatString: "#0.##",
+		showInLegend: true,
+		datPoints : <%out.print(dataPoints1);%>
+	}
+	]
 });
-chart.render();
 
+chart.render();
+ 
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	}
+	else {
+		e.dataSeries.visible = true;
+	}
+	chart.render();
+}
+ 
 }
 </script>
 </head>
-
 <body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer" style="height: 100%; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
-
-</html>
+</html> 
