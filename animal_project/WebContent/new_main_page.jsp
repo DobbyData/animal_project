@@ -49,7 +49,7 @@
 				</div>
 				<div class="brand">
 					<a href="new_main_page.jsp">
-						<span class="hidden-xs-down m-r-3">Web Analytics </span><span class="lead">Overview</span>
+						<span class="hidden-xs-down m-r-3">유기동물 보고서</span><span class="lead">Overview</span>
 					</a>
 				</div>
 
