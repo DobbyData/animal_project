@@ -62,72 +62,71 @@ int total = 0;
 	System.out.println(dataPoints4);
 
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+
+<!DOCTYPE HTML>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<script type="text/javascript">
-window.onload = function() { 
- 
+<head>  
+<script>
+window.onload = function () {
+
+
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
-	zoomEnabled: true,
-	theme: "light2",
-	title: {
-		text: "연도별 유기동물 종류 및 입양상황"
+	title:{
+		text: "2018 유기동물 현황"
+	},
+	axisY :{
+		includeZero: false,
+		prefix: "$"
 	},
 	toolTip: {
 		shared: true
 	},
 	legend: {
-		cursor: "pointer",
-		itemclick: toggleDataSeries
+		fontSize: 13
 	},
 	data: [{
-		type: "spline",
-		name: "보호중",
-		yValueFormatString: "#0.##",
+		type: "splineArea",
 		showInLegend: true,
-		dataPoints: <%out.print(dataPoints1);%>
-	}, {
-		type: "spline",
-		name: "자연사 / 안락사",
-		yValueFormatString: "#0.##",
-		showInLegend: true,
-		dataPoints: <%out.print(dataPoints2);%>
-	}, {
-		type: "spline",
-		name: "입양 / 기증",
-		yValueFormatString: "#0.##",
-		showInLegend: true,
-		dataPoints: <%out.print(dataPoints3);%>
-	}, {
-		type: "spline",
 		name: "총",
-		showInLegend: true,
-		yValueFormatString: "0.##",
+		yValueFormatString: "$#,##0",
+		xValueFormatString: "MMM YYYY",
+		color: "#F5A9BC",
 		dataPoints: <%out.print(dataPoints4);%>
+ 	},
+	{
+		type: "splineArea", 
+		showInLegend: true,
+		name: "자연사/안락사",
+		yValueFormatString: "$#,##0",
+		color:"#E2A9F3",
+		dataPoints: <%out.print(dataPoints2);%>
+ 	},
+	{
+		type: "splineArea", 
+		showInLegend: true,
+		name: "입양/기증",
+		yValueFormatString: "$#,##0", 
+		color:"#E2A9F3",
+		dataPoints: <%out.print(dataPoints3);%>
+ 	},
+	{
+		type: "splineArea", 
+		showInLegend: true,
+		yValueFormatString: "$#,##0",      
+		name: "보호중",
+		color:"#ECCEF5",
+		dataPoints: <%out.print(dataPoints1);%>
 	}]
 });
 chart.render();
- 
-function toggleDataSeries(e) {
-	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-		e.dataSeries.visible = false;
-	}
-	else {
-		e.dataSeries.visible = true;
-	}
-	chart.render();
-}
- 
+
 }
 </script>
-<title>Insert title here</title>
 </head>
 <body>
-<div id="chartContainer" style="height: 100%; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html>

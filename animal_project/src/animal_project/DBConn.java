@@ -10,16 +10,16 @@ public class DBConn {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
 			
-			String url = "jdbc:mysql://localhost:3306/animaldb?characterEncoding=EUC-KR&serverTimezone=UTC&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
-			String id = "root"; 		// »ç¿ëÀÚ°èÁ¤
-			String pw = "qwer1234!"; 	// »ç¿ëÀÚ°èÁ¤ÀÇ ÆÐ½º¿öµå 
+			String url = "jdbc:mysql://localhost:3307/animaldb?characterEncoding=EUC-KR&serverTimezone=UTC&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
+			String id = "root"; 		// ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½
+			String pw = "qwer1234!"; 	// ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 			
 			conn=DriverManager.getConnection(url,id,pw);
 		}catch(SQLException e){
 			System.err.println("Error" + e.getMessage());
 			
 		} catch(ClassNotFoundException e){
-			System.err.println("JDBC µå¶óÀÌ¹ö¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.");
+			System.err.println("JDBC ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
 		}
 		return conn;
 	}
