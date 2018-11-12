@@ -92,7 +92,7 @@ response.setDateHeader("Expires",0);
 						<h4 class="card-title m-b-2">"연도별 유기동물 종류 및 입양상황"</h4>
 				
 					<div id="selectBox">
-					<form action="../pie/pieAll2.jsp" target="iframe1" display='inline'>
+					<form action="./pie/pieBase2.jsp" target="iframe1" display='inline'>
 						<select name = "year">
 							<option value = 2017> 2017 </option>
 							<option value = 2016> 2016 </option>
