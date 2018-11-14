@@ -14,6 +14,7 @@ ResultSet reRs = null;
 request.setCharacterEncoding("euc-kr");
 String reYear = request.getParameter("year");
 String reKind = request.getParameter("kind");
+
 String strKind = null;
 if (reKind.equals("1")){	// 두번째 파라미터로 부제목을 입력할 수 있도록 내용 비교
 	strKind = "Cats";
@@ -34,6 +35,7 @@ rePstmt.setString(1, reYear+'%');
 rePstmt.setString(2, reKind);
 //System.out.println(rePstmt);		// 쿼리문 확인
 reRs = rePstmt.executeQuery(); // 쿼리를 실행하고 결과를 ResultSet 객체에 담는다. 
+
 int total = 0;
 Gson gsonObj = new Gson();
 Map<Object,Object> map = null;

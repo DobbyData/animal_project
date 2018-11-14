@@ -3,7 +3,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 public class DBConn {
 	public static Connection getMySqlConnection() {
 		Connection conn = null;
@@ -11,15 +10,15 @@ public class DBConn {
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
 			
 			String url = "jdbc:mysql://localhost:3306/animaldb?characterEncoding=EUC-KR&serverTimezone=UTC&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
-			String id = "root"; 		// ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½
-			String pw = "mkyu0917"; 	// ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+			String id = "root"; 		// »ç¿ëÀÚ°èÁ¤
+			String pw = "plus_1004"; 	// »ç¿ëÀÚ°èÁ¤ÀÇ ÆÐ½º¿öµå 
 			
 			conn=DriverManager.getConnection(url,id,pw);
 		}catch(SQLException e){
 			System.err.println("Error" + e.getMessage());
 			
 		} catch(ClassNotFoundException e){
-			System.err.println("JDBC ï¿½ï¿½ï¿½ï¿½Ì¹ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
+			System.err.println("JDBC µå¶óÀÌ¹ö¸¦ Ã£Áö ¸øÇß½À´Ï´Ù.");
 		}
 		return conn;
 	}
