@@ -35,10 +35,12 @@
 	#iframes{
 	 width:100%;
 	 height:320px;
+	 border: 0;
 	}
 	.iframes2{
 	 width:100%;
 	 height:320px;
+	 border: 0;
 	}
 	
 		*{
@@ -92,8 +94,8 @@
 					<div class="card card-block">
 						<h4 class="card-title m-b-2">머신러닝 입양률 예측</h4>
 						<div id="mi_graph">
-							<iframe class='iframes2' src=./sido/ml_graph_bar.jsp>
-							</iframe>
+							<iframe class='iframes2' src=./sido/ml_graph_bar.jsp></iframe>
+							
 						</div>
 					</div>
 				</div>

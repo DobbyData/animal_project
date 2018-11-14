@@ -124,7 +124,7 @@ function toggleDataSeries(e) {
 <title>Insert title here</title>
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%"></div>
+<div id="chartContainer" style="height: 280px; width: 100%"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>
