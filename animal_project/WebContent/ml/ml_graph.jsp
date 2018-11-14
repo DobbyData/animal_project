@@ -12,8 +12,8 @@ Connection conn = DBConn.getMySqlConnection();
 
 PreparedStatement pstmtOld = null;
 ResultSet rsOld = null;
-//String sqlOld = "select adopted, n_adopted from ml_result where ydate='2018-11-07';";
-String sqlOld = "select adopted, n_adopted from ml_result where id='1';";
+//String sqlOld = "select adopted, n_adopted from ml_result where ydate='20181101';";
+String sqlOld = "select adopted, n_adopted from ml_result where id='2';";
 
 pstmtOld = conn.prepareStatement(sqlOld); // prepareStatement에서 해당 sql을 미리 컴파일한다. 
 

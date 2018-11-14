@@ -82,9 +82,7 @@ window.onload = function() {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	theme: "light2",
-	title: {
-		text: "연도별 유기동물 종류 및 입양상황"
-	},
+	
 	toolTip: {
 		shared: true
 	},
@@ -134,7 +132,7 @@ function toggleDataSeries(e) {
 </script>
 </head>
 <body>
-<div id="chartContainer" style="height: 350px; width: 750px;"></div>
+<div id="chartContainer" style="height: 320px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 </html> 

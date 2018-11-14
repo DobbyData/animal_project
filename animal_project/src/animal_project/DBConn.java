@@ -11,15 +11,15 @@ public class DBConn {
 			Class.forName("com.mysql.cj.jdbc.Driver"); 
 			
 			String url = "jdbc:mysql://localhost:3307/animaldb?characterEncoding=EUC-KR&serverTimezone=UTC&autoReconnect=true&useSSL=false&allowPublicKeyRetrieval=true";
-			String id = "root"; 		// ����ڰ���
-			String pw = "qwer1234!"; 	// ����ڰ����� �н����� 
-			
+			String id = "root"; 		
+			String pw = "qwer1234!"; 
+
 			conn=DriverManager.getConnection(url,id,pw);
 		}catch(SQLException e){
 			System.err.println("Error" + e.getMessage());
 			
 		} catch(ClassNotFoundException e){
-			System.err.println("JDBC ����̹��� ã�� ���߽��ϴ�.");
+			System.err.println("JDBC class found exception error.");
 		}
 		return conn;
 	}
