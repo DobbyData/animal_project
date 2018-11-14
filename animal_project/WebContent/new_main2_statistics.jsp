@@ -111,9 +111,12 @@ response.setDateHeader("Expires",0);
 				
 					<div id="selectBox">
 <<<<<<< HEAD
+<<<<<<< HEAD
 					<form action="./pie/pieBase2.jsp" target="iframe1" >
 						<select name = "year" >
 =======
+=======
+>>>>>>> refs/remotes/origin/master
 					<form action="./pie/pieBase2.jsp" target="iframe1" display='inline'>
 						<select name = "year">
 >>>>>>> refs/remotes/origin/master
