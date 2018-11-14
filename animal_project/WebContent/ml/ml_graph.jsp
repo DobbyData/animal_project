@@ -12,8 +12,8 @@ Connection conn = DBConn.getMySqlConnection();
 
 PreparedStatement pstmtOld = null;
 ResultSet rsOld = null;
-//String sqlOld = "select adopted, n_adopted from ml_result where ydate='20181101';";
-String sqlOld = "select adopted, n_adopted from ml_result where id='2';";
+//String sqlOld = "select adopted, n_adopted from ml_result where ydate='20181113';";
+String sqlOld = "select adopted, n_adopted from ml_result where id='3';";
 
 pstmtOld = conn.prepareStatement(sqlOld); // prepareStatement에서 해당 sql을 미리 컴파일한다. 
 
@@ -59,7 +59,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	exportEnabled: true,
 	animationEnabled: true,
 	title: {
-		text: "유기동물 입양 예측 현황"
+		text: ""
 	},
 	data: [{
 		type: "pie",

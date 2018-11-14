@@ -154,7 +154,6 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	},
 	data: [{
 		type: "bar",
-		toolTipContent: "<img src=\"https://canvasjs.com/wp-content/uploads/images/gallery/javascript-column-bar-charts/\"{url}\"\" style=\"width:40px; height:20px;\"> <b>{label}</b><br>Budget: ${y}bn<br>{gdp}% of GDP",
 		dataPoints:<%out.print(dataPoints1);%>
 	}]
 });
@@ -163,6 +162,7 @@ chart.render();
 }
 </script>
 </head>
+
 <body>
 <div id="chartContainer" style="height: 300px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>

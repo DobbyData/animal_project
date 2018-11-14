@@ -74,7 +74,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	zoomEnabled: true,
 	theme: "light2",
 	title: {
-		text: "2018년 유기동물 현황"
+		text: ""
 	},
 	toolTip: {
 		shared: true

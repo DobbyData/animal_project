@@ -69,7 +69,7 @@
 					<div class="card card-block">
 						<h4 class="card-title m-b-2">2018년 유기동물 데이터</h4>
 						<div id="2018data">
-							<iframe id='iframes' src=./olddata/data2018.jsp>
+							<iframe id='iframes' src=./2018data/processState18.jsp>
 							</iframe>
 						</div>
 					</div>
@@ -94,7 +94,7 @@
 					<div class="card card-block">
 						<h4 class="card-title m-b-2">머신러닝 입양률 예측</h4>
 						<div id="mi_graph">
-							<iframe class='iframes2' src=./sido/ml_graph_bar.jsp></iframe>
+							<iframe class='iframes2' src=./ml/ml_graph.jsp></iframe>
 							
 						</div>
 					</div>
