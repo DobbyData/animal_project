@@ -73,7 +73,9 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	zoomEnabled: true,
 	theme: "light2",
-	
+	title: {
+		text: "연도별 유기동물 종류 및 입양상황"
+	},
 	toolTip: {
 		shared: true
 	},
@@ -82,25 +84,25 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		itemclick: toggleDataSeries
 	},
 	data: [{
-		type: "spline",
+		type: "line",
 		name: "보호중",
 		yValueFormatString: "#0.##",
 		showInLegend: true,
 		dataPoints: <%out.print(dataPoints1);%>
 	}, {
-		type: "spline",
+		type: "line",
 		name: "자연사 / 안락사",
 		yValueFormatString: "#0.##",
 		showInLegend: true,
 		dataPoints: <%out.print(dataPoints2);%>
 	}, {
-		type: "spline",
+		type: "line",
 		name: "입양 / 기증",
 		yValueFormatString: "#0.##",
 		showInLegend: true,
 		dataPoints: <%out.print(dataPoints3);%>
 	}, {
-		type: "spline",
+		type: "line",
 		name: "총",
 		showInLegend: true,
 		yValueFormatString: "0.##",
@@ -124,7 +126,7 @@ function toggleDataSeries(e) {
 <title>Insert title here</title>
 </head>
 <body>
-<div id="chartContainer" style="height: 280px; width: 100%"></div>
+<div id="chartContainer" style="height: 100%; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 </body>

@@ -25,7 +25,7 @@ response.setDateHeader("Expires",0);
 	<link href="assets/bootstrap/bootstrap4-alpha3.min.css" rel="stylesheet">
 	<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="assets/web-analytics/style.css" rel="stylesheet">
-
+	<link href="css/menubar.css" rel="stylesheet">
 	<!-- scripts -->
 	<script src="assets/jquery/jquery-3.1.0.min.js"></script>
 	<script src="assets/tether/tether.min.js"></script>
@@ -34,29 +34,46 @@ response.setDateHeader("Expires",0);
 	<script src="assets/web-analytics/overview.js"></script>
 
 </head>
+<link rel="stylesheet" type="text/css" href="./css/manubar.css">
 
 <style>
+	*{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	}
 
 	#2018data{
 	 position: relative;
 	 border: 3px solid black;
 	}
 	
-	.iframe{
+	#iframe1{
 	 position:relative;
 	 width:100%;
 	 height:350px;
 	 border: 0;
 	}
-	.iframes2{
+	#iframe2{
+	 position:relative;
 	 width:100%;
-	 height:350px;
+	 height:750px;
+	 border: 0;
+	}
+	#selectBox{
+	 padding-left: 78.5%;
+	 position:relative;
+	 width:100%;
+	 
+	
+	}
+	input{
+	 margin-left: 0.5em;
 	}
 	
 		*{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-
 	}
 	html,body{
 		width:100%;
@@ -66,6 +83,7 @@ response.setDateHeader("Expires",0);
 		
 	
 		}
+
 </style>
 </head>
 <body>
@@ -79,7 +97,7 @@ response.setDateHeader("Expires",0);
 					<div class="card card-block">
 						<h4 class="card-title m-b-2">2018년 유기동물 데이터</h4>
 						<div id="2018data">
-							<iframe class="iframe" src="./olddata/allGraph.jsp"></iframe>
+							<iframe id="iframe1" src="./olddata/allGraph.jsp"></iframe>
 						</div>
 					</div>
 				</div>
@@ -89,11 +107,19 @@ response.setDateHeader("Expires",0);
 			<div class="row m-b-1">
 				<div class="col-md-12">
 					<div class="card card-block">
-						<h4 class="card-title m-b-2">"연도별 유기동물 종류 및 입양상황"</h4>
+						<h4 class="card-title m-b-2">"연도별 유기동물 보호상태 및 상세그래프"</h4>
 				
 					<div id="selectBox">
-					<form action="../pie/pieAll2.jsp" target="iframe1" display='inline'>
+<<<<<<< HEAD
+<<<<<<< HEAD
+					<form action="./pie/pieBase2.jsp" target="iframe1" >
+						<select name = "year" >
+=======
+=======
+>>>>>>> refs/remotes/origin/master
+					<form action="./pie/pieBase2.jsp" target="iframe1" display='inline'>
 						<select name = "year">
+>>>>>>> refs/remotes/origin/master
 							<option value = 2017> 2017 </option>
 							<option value = 2016> 2016 </option>
 							<option value = 2015> 2015 </option>
@@ -106,7 +132,7 @@ response.setDateHeader("Expires",0);
 					</form>
 				</div>
 					<div class="pieZone">
-						<iframe class='iframe' name='iframe1' src="./pie/pieBase.jsp" ></iframe>
+						<iframe id='iframe2' name='iframe1' src="./pie/pieBase.jsp" ></iframe>
 					</div>
 					</div>
 				</div>

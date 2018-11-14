@@ -14,6 +14,7 @@ ResultSet reRs = null;
 request.setCharacterEncoding("euc-kr");
 String reYear = request.getParameter("year");
 String reKind = request.getParameter("kind");
+
 String strKind = null;
 if (reKind.equals("1")){	// 두번째 파라미터로 부제목을 입력할 수 있도록 내용 비교
 	strKind = "Cats";
@@ -34,6 +35,7 @@ rePstmt.setString(1, reYear+'%');
 rePstmt.setString(2, reKind);
 //System.out.println(rePstmt);		// 쿼리문 확인
 reRs = rePstmt.executeQuery(); // 쿼리를 실행하고 결과를 ResultSet 객체에 담는다. 
+
 int total = 0;
 Gson gsonObj = new Gson();
 Map<Object,Object> map = null;
@@ -65,10 +67,22 @@ String dataPoints = gsonObj.toJson(list);
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <style>
+	*{
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	}
+	html,body{
+		width:100%;
+		height:100%;
+		margin:0;
+		padding:0;
+		
+	
+		}
 	.wrap {
 		width:100%;
 		height:95%;
-		position:absolute;
 		margin: 0;
 		padding: 0;
 	}
@@ -117,7 +131,7 @@ var abandonedData = {
 };
 var pieOptions = {
 		animationEnabled: true,
-		theme: "light2",
+		theme: "light1",
 		title: {
 			text: "2017년 유기동물 보호상태"
 		},
@@ -139,7 +153,7 @@ chart.render();
 <body>
 <div class="wrap">
 	<div class="graphZone1">
-		<div id="chartContainer" style="height: 70%; width: 99%;"></div>
+		<div id="chartContainer" "></div>
 	</div>
 	<div class="graphZone2">
 		<iframe class="iframe" src="bubble.jsp"></iframe>

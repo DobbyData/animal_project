@@ -237,43 +237,43 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <style>
-	.wrap {
-		width:100%;
-		height:95%;
+	#wrap {
+		width:99%;
+		height:90%;
 		position:absolute;
 		margin: 0;
 		padding: 0;
 	}
 	
-	.graphZone1{
+	#graphZone1{
 		float: left;
-		width:30%;
+		width:38%;
 		height:100%;
+		position:relation;
 	}
 		
-	.graphZone2{
+	#graphZone2{
 		float: right;
-		width:69%;
+		width:60%;
 		height:100%;
+		position:relation;
 	}
-	.graphPart1{
+	#graphPart1{
 		width:100%;
 		height:33%;
 		position:relative;
 	}
-		
-	.graphPart2{
+	#graphPart2{
 		width:100%;
 		height:33%;
 		position:relative;
 	}
-		
-	.graphPart3{
+	#graphPart3{
 		width:100%;
 		height:33%;
 		position:relative;
-	}
-	
+	}	
+
 	
 	.iframe{
 		width:100%;
@@ -351,31 +351,31 @@ var abandonedData = {
 			color: "#51cda0",
 			type: "column",
 			yValueType: "count",
-			dataPoints: <%out.print(r17happenMth);%>}],
+			dataPoints: <%out.print(d17happenMth);%>}],
 		[{
 			name: "유기 동물 성장 상태",
 			color: "#51cda0",
 			type: "column",
 			yValueType: "count",
-			dataPoints: <%out.print(r17age);%>}],
+			dataPoints: <%out.print(d17age);%>}],
 		[{
 			name: "유기 동물 사이즈",
 			color: "#51cda0",
 			type: "column",
 			yValueType: "count",
-			dataPoints: <%out.print(r17size);%>}],
+			dataPoints: <%out.print(d17size);%>}],
 		[{
 			name: "유기 동물 성별",
 			color: "#51cda0",
 			type: "column",
 			yValueType: "count",
-			dataPoints: <%out.print(r17sex);%>}],
+			dataPoints: <%out.print(d17sex);%>}],
 		[{
 			name: "유기 동물 중성화 상태",
 			color: "#51cda0",
 			type: "column",
 			yValueType: "count",
-			dataPoints: <%out.print(r17neuter);%>}]],
+			dataPoints: <%out.print(d17neuter);%>}]],
 	"반환": [[{
 			name: "유기동물 보호 지역",
 			color: "#df7970",
@@ -416,7 +416,7 @@ var abandonedData = {
  
 var pieOptions = {
 		animationEnabled: true,
-		theme: "light2",
+		theme: "light1",
 		title: {
 			text: "2017년 유기동물 보호상태"
 		},
@@ -426,6 +426,7 @@ var pieOptions = {
 			itemTextFormatter: function (e) {
 				return e.dataPoint.label + ": " + Math.round(e.dataPoint.y / totalVisitors * 100) + "%";  
 			}
+		 
 		},
 	data: []
 };
@@ -433,10 +434,17 @@ var pieOptions = {
 var DrilldownedChartOptions = {
 	animationEnabled: true,
 	theme: "light2",
+	axisX:{
+		   labelFontColor: "black",
+		   labelFontWeight: "bold",
+		   labelFontSize: 12
+		   },
 	data: []
 };
  
-var chart = new CanvasJS.Chart("chartContainer", pieOptions);
+var chart = new CanvasJS.Chart("chartContainer", pieOptions
+	
+		);
 chart.options.data = abandonedData["Abandoned Animal"];
 chart.render();
  
@@ -475,22 +483,22 @@ function ChartDrilldownHandler(e) {
 </style>
 </head>
 <body>
-<div class="wrap">
-	<div class="graphZone1">
-		<div id="chartContainer" style="height: 70%; width: 99%;"></div>
+<div id="wrap">
+	<div id="graphZone1">
+		<div id="chartContainer" style="height: 100%; width: 100%;"></div> 
 	</div>
-	<div class="graphZone2" src="bubble.jsp">		
-		<div class="graphPart1">
-				<div id="orgNm" style="height: 100%; width: 50%; float:left;"></div>
-				<div id="happenMth" style="height: 100%; width: 50%; float:left;"></div>
+	<div id="graphZone2" src="bubble.jsp">		
+		<div id="graphPart1">
+				<div id="orgNm" style="height: 100%; width: 48%; float:left;"></div>
+				<div id="happenMth" style="height: 100%; width: 48%; float:left;"></div>
 		</div>		
-		<div class="graphPart2">
-				<div id="age" style="height: 100%; width: 50%; float:left;"></div>
-				<div id="size" style="height: 100%; width: 50%; float:left;"></div>
+		<div id="graphPart2">
+				<div id="age" style="height: 100%; width: 48%; float:left;"></div>
+				<div id="size" style="height: 100%; width: 48%; float:left;"></div>
 		</div>
-		<div class="graphPart3">
-				<div id="sex" style="height: 100%; width: 50%; float:left;"></div>
-				<div id="neuter" style="height: 100%; width: 50%; float:left;"></div>
+		<div id="graphPart3">
+				<div id="sex" style="height: 100%; width: 48%; float:left;"></div>
+				<div id="neuter" style="height: 100%; width: 48%; float:left;"></div>
 		</div>
 	</div>
 </div>

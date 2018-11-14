@@ -26,14 +26,13 @@
 
 </head>
 <style>
-
-
+	
 	#iframes{
 	 position:relative;
 	 width:100%;
 	 height:880px;
-	 border: 0px
-	
+	 border: 0;
+	 
 	 
 	}
 
@@ -44,12 +43,10 @@
 	<nav class="navbar navbar-fixed-top" id="header">
 		<div class="container-fluid">
 			<div class="navbar-header">
-				<div id="sidebar-toggle-button">
-					<i class="fa fa-bars" aria-hidden="true"></i>
-				</div>
+				
 				<div class="brand">
 					<a href="new_main_page.jsp">
-						<span class="hidden-xs-down m-r-3">유기동물 보고서</span><span class="lead">Overview</span>
+						<span class="hidden-xs-down m-r-3">유기동물 실태 보고서</span><span class="lead"></span>
 					</a>
 				</div>
 
@@ -64,14 +61,14 @@
 			<li>
 				<a href="new_main_page.jsp">
 					<i class="fa fa-clock-o fa-lg fa-fw" aria-hidden="true"></i>
-					<span>Real Time</span>
+					<span>Main</span>
 				</a>
 			</li>
 			<li role="separator" class="divider"></li>
 			<li>
-				<a href="new_main2_statistics.jsp" target="iframes" class="active">
+				<a href="new_main2_statistics.jsp" target="iframes" >
 					<i class="fa fa-newspaper-o fa-lg fa-fw" aria-hidden="true"></i>
-					<span>Overview</span>
+					<span>Detail statistic </span>
 				</a>
 			</li>
 			<li role="separator" class="divider"></li>
@@ -82,14 +79,14 @@
 	<!-- page-content-wrapper -->
 	<div class="page-content-toggle" id="page-content-wrapper">
 		<div class="container-fluid">
-			<iframe name="iframes" id='iframes' src="graph_pages.jsp"   scrolling="no"> </iframe>
+			<iframe name="iframes" id='iframes' src="graph_pages.jsp" > </iframe>
 		
 		</div>
 		<!-- /.container-fluid -->
 
 	</div>
 	<!-- /page-content-wrapper -->
-
+	<span style="position: absolute; left: 0px; top: -20000px; padding: 0px; margin: 0px; border: none; white-space: pre; line-height: normal; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 55px; font-weight: normal; display: none;">Mpgyi</span>
 </body>
 
 </html>

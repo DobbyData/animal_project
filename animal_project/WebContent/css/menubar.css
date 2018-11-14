@@ -1,36 +1,22 @@
-@charset "EUC-KR";
+body {
+  margin: 10px;
+  font-size: 14px;
+}
 
-a:focus {
-	outline: none;
+select {
+  width: 100px;
+  padding: .2em .2em;
+  margin-left: 0.5em;
+  font-family: inherit;
+  background: url(https://farm1.staticflickr.com/379/19928272501_4ef877c265_t.jpg) no-repeat 95% 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #999;
+  border-radius: 0px;
 }
-ul.sidenav {
-	font-size: 0.8em;
-	float: left;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	background: #005094;
-	border-bottom: 1px solid #3373a9;
-	border-top: 1px solid #003867;
-}
-ul.sidenav li a{
-	display: block;
-	color: #fff;
-	text-decoration: none;
-	width: 100%;
-	padding: 10px 10px 10px 35px;
-	background: url(../css/image_files/sidenav_a.gif) no-repeat 5px 7px;
-	border-top: 1px solid #3373a9;
-	border-bottom: 1px solid #003867;
-}
-ul.sidenav li a:hover {
-	background: #003867 url(../css/image_files/sidenav_a.gif) no-repeat 5px 7px;
-	border-top: 1px solid #1a4c76;
-}
-ul.sidenav li span{	display: none; }
-ul.sidenav li a:hover span {
-	display: block;
-	font-size: 0.8em;
-	padding: 10px 0;
+
+select::-ms-expand {
+  /* for IE 11 */
+  display: none;
 }
