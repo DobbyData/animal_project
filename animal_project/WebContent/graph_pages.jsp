@@ -34,12 +34,12 @@
 	
 	#iframes{
 	 width:100%;
-	 height:320px;
+	 height:360px;
 	 border: 0;
 	}
 	.iframes2{
 	 width:100%;
-	 height:320px;
+	 height:350px;
 	 border: 0;
 	}
 	
@@ -66,7 +66,7 @@
 			<!-- 1st row -->
 			<div class="row m-b-1">
 				<div class="col-md-12">
-					<div class="card card-block">
+					<div class="card card-block"style="padding: 0rem; margin-top: 1.0rem">
 						<h4 class="card-title m-b-2">2018년 유기동물 데이터</h4>
 						<div id="2018data">
 							<iframe id='iframes' src=./2018data/processState18.jsp>
@@ -80,7 +80,7 @@
 			<!-- 3rd row -->
 			<div class="row">
 				<div class="col-xl-6">
-					<div class="card card-block">
+					<div class="card card-block" style="padding: 0rem; margin: 0rem">
 						<h4 class="card-title m-b-2">
 							<span id="visitors-chart-heading">시도 별 유기동물 분포</span>
 						</h4>
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 				<div class="col-xl-6">
-					<div class="card card-block">
+					<div class="card card-block" style="padding: 0rem; margin: 0rem">
 						<h4 class="card-title m-b-2">머신러닝 입양률 예측</h4>
 						<div id="mi_graph">
 							<iframe class='iframes2' src=./ml/ml_graph.jsp></iframe>
@@ -99,7 +99,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+
 			<!-- /3rd row -->
 
 		</div>

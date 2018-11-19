@@ -77,16 +77,16 @@
 	<!-- /sidebar -->
 
 	<!-- page-content-wrapper -->
-	<div class="page-content-toggle" id="page-content-wrapper">
-		<div class="container-fluid">
-			<iframe name="iframes" id='iframes' src="graph_pages.jsp" > </iframe>
+	<div class="page-content-toggle" id="page-content-wrapper" >
+		<div class="container-fluid" style="padding: 0rem; margin: 0rem">
+			<iframe name="iframes" id='iframes' src="graph_pages.jsp"  style="padding: 0rem; margin: 0rem"> </iframe>
 		
 		</div>
 		<!-- /.container-fluid -->
 
 	</div>
 	<!-- /page-content-wrapper -->
-	<span style="position: absolute; left: 0px; top: -20000px; padding: 0px; margin: 0px; border: none; white-space: pre; line-height: normal; font-family: &quot;Trebuchet MS&quot;, Helvetica, sans-serif; font-size: 55px; font-weight: normal; display: none;">Mpgyi</span>
+
 </body>
 
 </html>

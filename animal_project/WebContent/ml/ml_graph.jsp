@@ -13,7 +13,7 @@ Connection conn = DBConn.getMySqlConnection();
 PreparedStatement pstmtOld = null;
 ResultSet rsOld = null;
 //String sqlOld = "select adopted, n_adopted from ml_result where ydate='20181113';";
-String sqlOld = "select adopted, n_adopted from ml_result where id='3';";
+String sqlOld = "select adopted, n_adopted from ml_result where id='2';";
 
 pstmtOld = conn.prepareStatement(sqlOld); // prepareStatement에서 해당 sql을 미리 컴파일한다. 
 
@@ -79,7 +79,7 @@ chart.render();
 </head>
 
 <body>
-<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<div id="chartContainer" style="height: 330px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
 
